@@ -15,8 +15,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
   }, []);
 
   function onDismiss() {
-    // router.back();
-    router.push('/')
+    router.back();
   }
 
   return createPortal(
