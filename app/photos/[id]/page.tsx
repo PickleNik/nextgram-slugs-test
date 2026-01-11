@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -11,5 +13,8 @@ export default async function PhotoPage({
   params: Promise<{ id: string }>;
 }) {
   const id = (await params).id;
-  return <div className="card">{id}</div>;
+  return <div>
+			<div className="card">{id}</div>
+      What if i wanted a <Link href="/photos/2">new photo</Link> page?
+		</div>
 }
